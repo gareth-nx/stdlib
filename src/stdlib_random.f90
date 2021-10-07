@@ -1,5 +1,6 @@
-module stdlib_stats_distribution_PRNG
+module stdlib_random
     use stdlib_kinds, only: int8, int16, int32, int64
+    use stdlib_optval, only: optval
     use stdlib_error, only: error_stop
     implicit none
     private
@@ -16,8 +17,8 @@ module stdlib_stats_distribution_PRNG
     !! Version experimental
     !!
     !! Generation of random integers with different kinds
-    !! ([Specification](../page/specs/stdlib_stats_distribution_PRNG.html#
-    !! description))
+    !! ([Specification](../page/specs/stdlib_random.html#
+    !! dist_rand-get-a-random-integer-with-specified-kind))
         module procedure dist_rand_iint8
         module procedure dist_rand_iint16
         module procedure dist_rand_iint32
@@ -28,8 +29,8 @@ module stdlib_stats_distribution_PRNG
     !! Version experimental
     !!
     !! Set seed value for random number generator
-    !! ([Specification](../page/specs/stdlib_stats_distribution_PRNG.html#
-    !! description))
+    !! ([Specification](../page/specs/stdlib_random.html#
+    !! random_seed-set-or-get-a-value-of-seed-to-the-probability-distribution-pseudorandom-number-generator))
     !!
         module procedure random_distribution_seed_iint8
         module procedure random_distribution_seed_iint16
@@ -165,8 +166,7 @@ module stdlib_stats_distribution_PRNG
     ! Values are converted from C unsigned integer of 0x9e3779b97f4a7c15,
     ! 0xbf58476d1ce4e5b9, 0x94d049bb133111eb
 
-        if(present(s)) si = s
-        res = si
+        res = optval(s, si)
         si = res + int01
         res = ieor(res, shiftr(res, 30)) * int02
         res = ieor(res, shiftr(res, 27)) * int03
@@ -253,4 +253,4 @@ module stdlib_stats_distribution_PRNG
         seed_initialized = .true.
     end subroutine random_distribution_seed_iint64
 
-end module stdlib_stats_distribution_PRNG
+end module stdlib_random
