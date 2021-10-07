@@ -231,7 +231,7 @@ contains
               end subroutine
 
               subroutine arg_medianOf3(a, indx, left, mid, right)
-                  ${arrayouttype}$, intent(in) :: a(:)
+                  ${arraytype}$, intent(in) :: a(:)
                   ${inttype}$, intent(inout) :: indx(:)
                   ${inttype}$, intent(in) :: left, mid, right 
                   if(a(indx(right)) < a(indx(left))) call swap(indx(right), indx(left))
