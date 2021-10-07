@@ -1,6 +1,6 @@
 #:include "common.fypp"
 ! Specify kinds/types for the input array in select and arg_select
-#:set ARRAY_KINDS_TYPES = INT_KINDS_TYPES + REAL_KINDS_TYPES
+#:set ARRAY_KINDS_TYPES_OUTPUT = list(zip(INT_KINDS, INT_TYPES, INT_TYPES)) + list(zip(REAL_KINDS, REAL_TYPES, REAL_TYPES)) + [('character', 'character(len=*)', 'character(len=len(a))')] + [('string_type', 'type(string_type)', 'type(string_type)')]
 ! The index arrays are of all INT_KINDS_TYPES
 
 module stdlib_selection
@@ -13,6 +13,7 @@ module stdlib_selection
 !
 
 use stdlib_kinds, only: int8, int16, int32, int64, sp, dp, qp
+use stdlib_string_type
 
 implicit none
 
@@ -24,7 +25,7 @@ interface select
     !! version: experimental
     !! ([Specification](..//page/specs/stdlib_selection.html#select-find-the-k-th-smallest-value-in-an-input-array))
 
-  #:for arraykind, arraytype in ARRAY_KINDS_TYPES
+  #:for arraykind, arraytype, arrayouttype in ARRAY_KINDS_TYPES_OUTPUT
     #:for intkind, inttype in INT_KINDS_TYPES
       #:set name = rname("select", 1, arraytype, arraykind, intkind)
       module procedure ${name}$
@@ -35,7 +36,7 @@ end interface
 interface arg_select
     !! version: experimental
     !! ([Specification](..//page/specs/stdlib_selection.html#arg_select-find-the-index-of-the-k-th-smallest-value-in-an-input-array))
-  #:for arraykind, arraytype in ARRAY_KINDS_TYPES
+  #:for arraykind, arraytype, arrayouttype in ARRAY_KINDS_TYPES_OUTPUT
     #:for intkind, inttype in INT_KINDS_TYPES
       #:set name = rname("arg_select", 1, arraytype, arraykind, intkind)
       module procedure ${name}$
@@ -45,7 +46,7 @@ end interface
 
 contains
 
-  #:for arraykind, arraytype in ARRAY_KINDS_TYPES
+  #:for arraykind, arraytype, arrayouttype in ARRAY_KINDS_TYPES_OUTPUT
     #:for intkind, inttype in INT_KINDS_TYPES
       #:set name = rname("select", 1, arraytype, arraykind, intkind)
       subroutine ${name}$(a, k, kth_smallest, left, right)
@@ -62,7 +63,7 @@ contains
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
               !! `kth_smallest=max(a)`
-          ${arraytype}$, intent(out) :: kth_smallest
+          ${arrayouttype}$, intent(out) :: kth_smallest
               !! On output contains the k-th smallest value of `a(:)`
           ${inttype}$, intent(in), optional :: left, right
               !! If we know that:
@@ -109,7 +110,7 @@ contains
           contains
               subroutine swap(a, b)
                   ${arraytype}$, intent(inout) :: a, b
-                  ${arraytype}$ :: tmp
+                  ${arrayouttype}$ :: tmp
                   tmp = a; a = b; b = tmp
               end subroutine
 
@@ -121,31 +122,31 @@ contains
                   if(a(right) < a(mid) ) call swap(a(mid)  , a(right))
               end subroutine
 
-              subroutine partition(array,left,right,iPivot)
-                  ${arraytype}$, intent(inout) :: array(:)
+              subroutine partition(a,left,right,iPivot)
+                  ${arraytype}$, intent(inout) :: a(:)
                   ${inttype}$, intent(in) :: left, right
                   ${inttype}$, intent(out) :: iPivot 
                   ${inttype}$ :: lo,hi
-                  ${arraytype}$ :: pivot
+                  ${arrayouttype}$ :: pivot
 
-                  pivot = array(left)
+                  pivot = a(left)
                   lo = left
                   hi=right
                   do while (lo <= hi)
-                    do while (array(hi) > pivot)
+                    do while (a(hi) > pivot)
                       hi=hi-1_ip
                     end do
                     do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                       if(a(lo) > pivot) exit
                       lo=lo+1_ip
                     end do
                     if (lo <= hi) then
-                      call swap(array(lo),array(hi))
+                      call swap(a(lo),a(hi))
                       lo=lo+1_ip
                       hi=hi-1_ip
                     end if
                   end do
-                  call swap(array(left),array(hi))
+                  call swap(a(left),a(hi))
                   iPivot=hi
               end subroutine
       end subroutine
@@ -153,7 +154,7 @@ contains
   #:endfor
 
 
-  #:for arraykind, arraytype in ARRAY_KINDS_TYPES
+  #:for arraykind, arraytype, arrayouttype in ARRAY_KINDS_TYPES_OUTPUT
     #:for intkind, inttype in INT_KINDS_TYPES
       #:set name = rname("arg_select", 1, arraytype, arraykind, intkind)
       subroutine ${name}$(a, indx, k, kth_smallest, left, right)
@@ -230,7 +231,7 @@ contains
               end subroutine
 
               subroutine arg_medianOf3(a, indx, left, mid, right)
-                  ${arraytype}$, intent(in) :: a(:)
+                  ${arrayouttype}$, intent(in) :: a(:)
                   ${inttype}$, intent(inout) :: indx(:)
                   ${inttype}$, intent(in) :: left, mid, right 
                   if(a(indx(right)) < a(indx(left))) call swap(indx(right), indx(left))
@@ -238,23 +239,23 @@ contains
                   if(a(indx(right)) < a(indx(mid)) ) call swap(indx(mid)  , indx(right))
               end subroutine
 
-              subroutine arg_partition(array, indx, left,right,iPivot)
-                  ${arraytype}$, intent(in) :: array(:)
+              subroutine arg_partition(a, indx, left,right,iPivot)
+                  ${arraytype}$, intent(in) :: a(:)
                   ${inttype}$, intent(inout) :: indx(:)
                   ${inttype}$, intent(in) :: left, right
                   ${inttype}$, intent(out) :: iPivot 
                   ${inttype}$ :: lo,hi
-                  ${arraytype}$ :: pivot
+                  ${arrayouttype}$ :: pivot
 
-                  pivot = array(indx(left))
+                  pivot = a(indx(left))
                   lo = left
                   hi = right
                   do while (lo <= hi)
-                    do while (array(indx(hi)) > pivot)
+                    do while (a(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
                     do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                      if(a(indx(lo)) > pivot) exit
                       lo=lo+1_ip
                     end do
                     if (lo <= hi) then
