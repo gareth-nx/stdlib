@@ -80,6 +80,13 @@ contains
           ${inttype}$ :: l, r, mid, iPivot
           integer, parameter :: ip = ${intkind}$
 
+          ! These following variables are only used inside contained subroutines, and should be
+          ! defined therein. But if not defined here, then gfortran-9 raises an error 
+          ! when arrayoutputtype == character(len=len(a)). Other compilers are OK with it 
+          ! (gfortran-10, gfortran-11, and various versions of ifort).
+          ${arrayouttype}$ :: tmp, pivot 
+
+
           l = 1_ip
           if(present(left)) l = left
           r = size(a, kind=ip)
@@ -110,7 +117,7 @@ contains
           contains
               subroutine swap(a, b)
                   ${arraytype}$, intent(inout) :: a, b
-                  ${arrayouttype}$ :: tmp
+                  !${arrayouttype}$ :: tmp
                   tmp = a; a = b; b = tmp
               end subroutine
 
@@ -127,7 +134,7 @@ contains
                   ${inttype}$, intent(in) :: left, right
                   ${inttype}$, intent(out) :: iPivot 
                   ${inttype}$ :: lo,hi
-                  ${arrayouttype}$ :: pivot
+                  !${arrayouttype}$ :: pivot
 
                   pivot = a(left)
                   lo = left
