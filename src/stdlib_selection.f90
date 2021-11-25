@@ -121,7 +121,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -223,7 +223,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -325,7 +325,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -427,7 +427,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -529,7 +529,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -631,7 +631,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -733,7 +733,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -835,7 +835,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -937,7 +937,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1039,7 +1039,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1141,7 +1141,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1243,7 +1243,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1345,7 +1345,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1447,7 +1447,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1549,7 +1549,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1651,7 +1651,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1753,7 +1753,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1855,7 +1855,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1957,7 +1957,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -2059,7 +2059,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -2161,7 +2161,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -2263,7 +2263,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -2365,7 +2365,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -2467,7 +2467,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -2578,7 +2578,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -2689,7 +2689,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -2800,7 +2800,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -2911,7 +2911,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3022,7 +3022,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3133,7 +3133,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3244,7 +3244,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3355,7 +3355,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3466,7 +3466,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3577,7 +3577,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3688,7 +3688,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3799,7 +3799,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3910,7 +3910,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4021,7 +4021,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4132,7 +4132,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4243,7 +4243,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4354,7 +4354,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4465,7 +4465,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4576,7 +4576,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4687,7 +4687,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4798,7 +4798,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4909,7 +4909,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -5020,7 +5020,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -5131,7 +5131,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do while(.true.)
+          do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
