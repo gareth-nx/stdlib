@@ -122,7 +122,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -224,7 +224,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -326,7 +326,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -428,7 +428,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -530,7 +530,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -632,7 +632,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -734,7 +734,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -836,7 +836,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -938,7 +938,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -1040,7 +1040,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -1142,7 +1142,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -1244,7 +1244,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -1346,7 +1346,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -1448,7 +1448,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -1550,7 +1550,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -1652,7 +1652,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -1754,7 +1754,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -1856,7 +1856,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -1958,7 +1958,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -2060,7 +2060,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -2162,7 +2162,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -2264,7 +2264,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -2366,7 +2366,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -2468,7 +2468,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call medianOf3(a, l, mid, r)
               call swap(a(l), a(mid))
@@ -2579,7 +2579,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -2690,7 +2690,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -2801,7 +2801,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -2912,7 +2912,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -3023,7 +3023,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -3134,7 +3134,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -3245,7 +3245,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -3356,7 +3356,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -3467,7 +3467,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -3578,7 +3578,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -3689,7 +3689,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -3800,7 +3800,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -3911,7 +3911,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -4022,7 +4022,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -4133,7 +4133,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -4244,7 +4244,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -4355,7 +4355,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -4466,7 +4466,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -4577,7 +4577,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -4688,7 +4688,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -4799,7 +4799,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -4910,7 +4910,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -5021,7 +5021,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
@@ -5132,7 +5132,7 @@ contains
           end if
 
           do while(.true.)
-              mid = (l+r)/2_ip ! Deliberate integer division
+              mid = l + (r-l)/2_ip ! Deliberate integer division
 
               call arg_medianOf3(a, indx, l, mid, r)
               call swap(indx(l), indx(mid))
