@@ -6,7 +6,7 @@ module stdlib_selection
 ! This code was modified from the "Coretran" implementation "quickSelect" by
 ! Leon Foks, https://github.com/leonfoks/coretran/tree/master/src/sorting
 !
-! Leon Foks gave permission to be release this code under stdlib's MIT license.
+! Leon Foks gave permission to release this code under stdlib's MIT license.
 ! (https://github.com/fortran-lang/stdlib/pull/500#commitcomment-57418593)
 !
 
@@ -16,7 +16,7 @@ implicit none
 
 private
 
-public select, arg_select
+public :: select, arg_select
 
 interface select
     !! version: experimental
@@ -88,7 +88,8 @@ contains
           integer(int8), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int8), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -189,7 +190,8 @@ contains
           integer(int8), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int16), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -290,7 +292,8 @@ contains
           integer(int8), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int32), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -391,7 +394,8 @@ contains
           integer(int8), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int64), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -492,7 +496,8 @@ contains
           integer(int16), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int8), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -593,7 +598,8 @@ contains
           integer(int16), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int16), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -694,7 +700,8 @@ contains
           integer(int16), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int32), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -795,7 +802,8 @@ contains
           integer(int16), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int64), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -896,7 +904,8 @@ contains
           integer(int32), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int8), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -997,7 +1006,8 @@ contains
           integer(int32), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int16), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -1098,7 +1108,8 @@ contains
           integer(int32), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int32), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -1199,7 +1210,8 @@ contains
           integer(int32), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int64), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -1300,7 +1312,8 @@ contains
           integer(int64), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int8), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -1401,7 +1414,8 @@ contains
           integer(int64), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int16), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -1502,7 +1516,8 @@ contains
           integer(int64), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int32), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -1603,7 +1618,8 @@ contains
           integer(int64), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int64), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -1704,7 +1720,8 @@ contains
           real(sp), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int8), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -1805,7 +1822,8 @@ contains
           real(sp), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int16), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -1906,7 +1924,8 @@ contains
           real(sp), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int32), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -2007,7 +2026,8 @@ contains
           real(sp), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int64), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -2108,7 +2128,8 @@ contains
           real(dp), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int8), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -2209,7 +2230,8 @@ contains
           real(dp), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int16), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -2310,7 +2332,8 @@ contains
           real(dp), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int32), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
@@ -2411,7 +2434,8 @@ contains
           real(dp), intent(inout) :: a(:)
               !! Array in which we seek the k-th smallest entry.
               !! On output it will be partially sorted such that
-              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`.
+              !! `all(a(1:(k-1)) <= a(k)) .and. all(a(k) <= a((k+1):size(a)))`
+              !! is true.
           integer(int64), intent(in) :: k
               !! We want the k-th smallest entry. E.G. `k=1` leads to
               !! `kth_smallest=min(a)`, and `k=size(a)` leads to
