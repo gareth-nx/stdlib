@@ -121,7 +121,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -136,7 +136,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -167,10 +167,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -223,7 +223,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -238,7 +238,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -269,10 +269,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -325,7 +325,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -340,7 +340,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -371,10 +371,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -427,7 +427,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -442,7 +442,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -473,10 +473,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -529,7 +529,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -544,7 +544,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -575,10 +575,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -631,7 +631,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -646,7 +646,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -677,10 +677,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -733,7 +733,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -748,7 +748,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -779,10 +779,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -835,7 +835,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -850,7 +850,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -881,10 +881,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -937,7 +937,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -952,7 +952,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -983,10 +983,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -1039,7 +1039,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1054,7 +1054,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -1085,10 +1085,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -1141,7 +1141,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1156,7 +1156,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -1187,10 +1187,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -1243,7 +1243,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1258,7 +1258,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -1289,10 +1289,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -1345,7 +1345,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1360,7 +1360,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -1391,10 +1391,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -1447,7 +1447,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1462,7 +1462,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -1493,10 +1493,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -1549,7 +1549,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1564,7 +1564,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -1595,10 +1595,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -1651,7 +1651,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1666,7 +1666,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -1697,10 +1697,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -1753,7 +1753,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1768,7 +1768,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -1799,10 +1799,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -1855,7 +1855,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1870,7 +1870,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -1901,10 +1901,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -1957,7 +1957,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -1972,7 +1972,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -2003,10 +2003,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -2059,7 +2059,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -2074,7 +2074,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -2105,10 +2105,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -2161,7 +2161,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -2176,7 +2176,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -2207,10 +2207,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -2263,7 +2263,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -2278,7 +2278,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -2309,10 +2309,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -2365,7 +2365,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -2380,7 +2380,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -2411,10 +2411,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -2467,7 +2467,7 @@ contains
               error stop "select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call medianOf3(a, l, mid, r)
@@ -2482,7 +2482,7 @@ contains
                 kth_smallest = a(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -2513,10 +2513,10 @@ contains
                     do while (array(hi) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                       if(array(lo) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                       if(array(lo) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(array(lo),array(hi))
                       lo=lo+1_ip
@@ -2578,7 +2578,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -2593,7 +2593,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -2626,10 +2626,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -2689,7 +2689,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -2704,7 +2704,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -2737,10 +2737,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -2800,7 +2800,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -2815,7 +2815,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -2848,10 +2848,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -2911,7 +2911,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -2926,7 +2926,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -2959,10 +2959,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -3022,7 +3022,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3037,7 +3037,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -3070,10 +3070,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -3133,7 +3133,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3148,7 +3148,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -3181,10 +3181,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -3244,7 +3244,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3259,7 +3259,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -3292,10 +3292,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -3355,7 +3355,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3370,7 +3370,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -3403,10 +3403,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -3466,7 +3466,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3481,7 +3481,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -3514,10 +3514,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -3577,7 +3577,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3592,7 +3592,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -3625,10 +3625,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -3688,7 +3688,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3703,7 +3703,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -3736,10 +3736,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -3799,7 +3799,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3814,7 +3814,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -3847,10 +3847,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -3910,7 +3910,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -3925,7 +3925,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -3958,10 +3958,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -4021,7 +4021,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4036,7 +4036,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -4069,10 +4069,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -4132,7 +4132,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4147,7 +4147,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -4180,10 +4180,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -4243,7 +4243,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4258,7 +4258,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -4291,10 +4291,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -4354,7 +4354,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4369,7 +4369,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -4402,10 +4402,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -4465,7 +4465,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4480,7 +4480,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -4513,10 +4513,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -4576,7 +4576,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4591,7 +4591,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -4624,10 +4624,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -4687,7 +4687,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4702,7 +4702,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -4735,10 +4735,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -4798,7 +4798,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4813,7 +4813,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -4846,10 +4846,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -4909,7 +4909,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -4924,7 +4924,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -4957,10 +4957,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -5020,7 +5020,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -5035,7 +5035,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -5068,10 +5068,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
@@ -5131,7 +5131,7 @@ contains
               error stop "arg_select must have 1 <= k <= size(a), and 1 <= left <= right <= size(a)";
           end if
 
-          do
+          searchk: do
               mid = l + ((r-l)/2_ip) ! Avoid (l+r)/2 which can cause overflow
 
               call arg_medianOf3(a, indx, l, mid, r)
@@ -5146,7 +5146,7 @@ contains
                 kth_smallest = indx(k)
                 return
               end if
-          end do
+          end do searchk
 
           contains
               pure subroutine swap(a, b)
@@ -5179,10 +5179,10 @@ contains
                     do while (array(indx(hi)) > pivot)
                       hi=hi-1_ip
                     end do
-                    do while (lo <= hi )
-                      if(array(indx(lo)) > pivot) exit
+                    inner_lohi: do while (lo <= hi )
+                      if(array(indx(lo)) > pivot) exit inner_lohi
                       lo=lo+1_ip
-                    end do
+                    end do inner_lohi
                     if (lo <= hi) then
                       call swap(indx(lo),indx(hi))
                       lo=lo+1_ip
